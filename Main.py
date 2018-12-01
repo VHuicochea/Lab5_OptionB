@@ -5,7 +5,7 @@
 # Last Day Edited: 11/24/2018
 # Lab 5 purpose: practice the use of Heaps
 
-import random
+import random, time
 from Heap import Heap
 
 
@@ -57,10 +57,12 @@ def main():
                 print(" ", sep=' ', end=' ', flush=True)
 
             print("\nSorting your array...")
-
+            
+            start_time = time.time()
             # Sorts the array
             sorted_array = heap_sort(user_array)
-
+            print("--- %s seconds ---" % (time.time() - start_time))
+            
             print("This is your sorted array:")
 
             # Prints sorted array
